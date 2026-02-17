@@ -4,6 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
 
+    const authSection = document.getElementById('auth-section');
+    const userInfo = document.getElementById('user-info');
+    const userNameSpan = document.getElementById('userName');
+    const logoutButton = document.getElementById('logoutButton');
+    const loginButtons = document.getElementById('login-buttons');
+    const generalLoginButton = document.getElementById('generalLogin');
+    const googleLoginButton = document.getElementById('googleLogin');
+    const kakaoLoginButton = document.getElementById('kakaoLogin');
+    const naverLoginButton = document.getElementById('naverLogin');
+
     // Load theme preference from localStorage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -15,6 +25,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     generateButton.addEventListener('click', generateLotteryNumbers);
     themeToggle.addEventListener('click', toggleTheme);
+
+    // --- Authentication Logic (Frontend UI only) ---
+    generalLoginButton.addEventListener('click', () => simulateLogin('사용자')); // Simulate login for a generic user
+    logoutButton.addEventListener('click', simulateLogout);
+
+    googleLoginButton.addEventListener('click', () => alert('Google 로그인 흐름 시작 (백엔드 필요)'));
+    kakaoLoginButton.addEventListener('click', () => alert('카카오 로그인 흐름 시작 (백엔드 필요)'));
+    naverLoginButton.addEventListener('click', () => alert('네이버 로그인 흐름 시작 (백엔드 필요)'));
+
+    function simulateLogin(username) {
+        userInfo.style.display = 'flex'; // Show user info
+        userNameSpan.textContent = `안녕하세요, ${username}님!`;
+        loginButtons.style.display = 'none'; // Hide login buttons
+    }
+
+    function simulateLogout() {
+        userInfo.style.display = 'none'; // Hide user info
+        loginButtons.style.display = 'flex'; // Show login buttons
+        alert('로그아웃되었습니다.');
+    }
+    // --- End Authentication Logic ---
 
     function generateLotteryNumbers() {
         const numbers = new Set();

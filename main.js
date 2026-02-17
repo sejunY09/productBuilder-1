@@ -1,8 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateButton = document.getElementById('generateButton');
     const lotteryNumbersContainer = document.getElementById('lotteryNumbers');
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Load theme preference from localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.textContent = '라이트 모드 전환';
+    } else {
+        themeToggle.textContent = '다크 모드 전환';
+    }
 
     generateButton.addEventListener('click', generateLotteryNumbers);
+    themeToggle.addEventListener('click', toggleTheme);
 
     function generateLotteryNumbers() {
         const numbers = new Set();
@@ -22,7 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initial display of empty circles with '?'
-    // This is already handled by index.html, but this function can be used to reset
-    // if needed. For initial load, the HTML already has the '?' circles.
+    function toggleTheme() {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            themeToggle.textContent = '라이트 모드 전환';
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeToggle.textContent = '다크 모드 전환';
+        }
+    }
 });

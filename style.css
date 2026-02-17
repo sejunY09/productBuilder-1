@@ -50,3 +50,27 @@ button:hover {
   font-weight: bold;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark-mode h1 {
+  color: #7abaff;
+}
+
+body.dark-mode button {
+  background-color: #555;
+  color: #eee;
+}
+
+body.dark-mode button:hover {
+  background-color: #777;
+}
+
+body.dark-mode .number-circle {
+  background-color: #444;
+  color: #eee;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+}

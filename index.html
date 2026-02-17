@@ -1,17 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로또 번호 생성기</title>
+  <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container">
-        <h1>Lotto Number Generator</h1>
-        <div id="numbers" class="numbers-container"></div>
-        <button id="generate-btn">Generate Numbers</button>
-    </div>
-    <script src="main.js"></script>
+  <h1>로또 번호 생성기</h1>
+  <button id="generateButton">번호 생성</button>
+  <div id="lotteryNumbers">
+    <span class="number-circle">?</span>
+    <span class="number-circle">?</span>
+    <span class="number-circle">?</span>
+    <span class="number-circle">?</span>
+    <span class="number-circle">?</span>
+    <span class="number-circle">?</span>
+  </div>
+  <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #FFC107, #FF5722, #E91E63, #9C27B0); /* Vibrant gradient */
   color: #333;
 }
 
@@ -52,7 +52,7 @@ button:hover {
 }
 /* Dark Mode Styles */
 body.dark-mode {
-  background-color: #222;
+  background: linear-gradient(135deg, #222, #444, #666); /* Darker gradient for dark mode */
   color: #eee;
 }
 

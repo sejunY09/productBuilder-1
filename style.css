@@ -270,3 +270,20 @@ body.dark-mode #naverLogin {
 body.dark-mode #naverLogin:hover {
   background-color: #1ec800;
 }
+
+/* Lottery Number Colors */
+.number-circle.color-1-10 {
+  background-color: #FFD700; /* Yellow */
+}
+.number-circle.color-11-20 {
+  background-color: #1E90FF; /* Blue */
+}
+.number-circle.color-21-30 {
+  background-color: #DC143C; /* Red */
+}
+.number-circle.color-31-40 {
+  background-color: #A9A9A9; /* Gray */
+}
+.number-circle.color-41-45 {
+  background-color: #32CD32; /* Green */
+}

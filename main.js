@@ -61,6 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const numberCircle = document.createElement('span');
             numberCircle.classList.add('number-circle');
             numberCircle.textContent = number;
+
+            if (number >= 1 && number <= 10) {
+                numberCircle.classList.add('color-1-10');
+            } else if (number >= 11 && number <= 20) {
+                numberCircle.classList.add('color-11-20');
+            } else if (number >= 21 && number <= 30) {
+                numberCircle.classList.add('color-21-30');
+            } else if (number >= 31 && number <= 40) {
+                numberCircle.classList.add('color-31-40');
+            } else if (number >= 41 && number <= 45) {
+                numberCircle.classList.add('color-41-45');
+            }
             lotteryNumbersContainer.appendChild(numberCircle);
         });
     }
